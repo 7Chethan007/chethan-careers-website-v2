@@ -19,7 +19,9 @@
 
 <body>
   <div class="container">
-    <h1 class="text-center mt-2 mb-4">Chethan Careers</h1>
+    <h1 class="text-center mt-2 mb-4">
+      {{company_name}} Careers
+    </h1>
     <img class="img-fluid" id="banner"
       src="https://33ac26e8-1986-4e3f-b054-d43a5114ff15-00-3ecwvi9t2tn51.kirk.replit.dev/static/banner.jpg">
     <h2 class="text-center mt-2 mb-4">About Chethan</h2>
@@ -32,13 +34,24 @@
       of
       Lorem Ipsum.
     </p>
+
+
     <h2 class="text-center mt-2 mb-4">Open Positions</h2>
-    <p>TO DO - Show Job Openings</p>
-    <div class="text-center">
-      <button class="btn btn-primary btn-lg">Contact Us</button>
-      <p class="mt-4">COPYRIGHT @ 2025 - Chethan M N</p>
+    <div>
+      <!-- Templating Syntax it's not HTML or CSS -->
+      <!-- It's a way to inster dynamic data to HTML or CSS -->
+      {% for job in jobs %}
+        {% include 'jobitem.html' %}
+      {% endfor %}
     </div>
-  </div>
+
+
+    
+    <div class=" text-center">
+          <button class="btn btn-primary btn-lg">Contact Us</button>
+          <p class="mt-4">COPYRIGHT @ 2025 - Chethan M N</p>
+      </div>
+    </div>
 </body>
 
 </html>
